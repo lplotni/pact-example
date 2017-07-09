@@ -1,0 +1,6 @@
+FROM postgres
+
+EXPOSE 5432
+
+ENV POSTGRES_PASSWORD=pact_broker
+ENV POSTGRES_USER=pact_broker

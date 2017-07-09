@@ -1,0 +1,11 @@
+hamburg-service:
+  build: hamburg-service
+cologne-service:
+  build: cologne-service
+info-app:
+  build: info-app
+  ports:
+    - "8080:8080"
+  links:
+    - hamburg-service
+    - cologne-service

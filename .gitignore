@@ -1,8 +1,10 @@
 # Compiled class file
 *.class
-build/*
-target/*
+*/build/*
+*/target/*
 .gradle/
+*/node_modules/*
+*/.idea/*
 
 # Log file
 *.log

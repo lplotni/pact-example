@@ -1,0 +1,42 @@
+{
+    "provider": {
+        "name": "cologne-service"
+    },
+    "consumer": {
+        "name": "info-app"
+    },
+    "interactions": [
+        {
+            "description": "a request for all vehicle registrations in Cologne",
+            "request": {
+                "method": "GET",
+                "path": "/vehicles/registrations/all"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "city": "Cologne",
+                    "gasoline": {
+                        "2017": 110
+                    },
+                    "diesel": {
+                        "2017": 20
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "data for Cologne from 2017 exists"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}

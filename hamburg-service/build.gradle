@@ -13,7 +13,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'info-app'
+    baseName = 'hamburg-service'
     version =  '0.1.0'
 }
 
@@ -33,12 +33,10 @@ dependencies {
 
     compile("org.projectlombok:lombok:1.16.18")
     compile("com.google.guava:guava:22.0")
-    compile("com.squareup.okhttp3:okhttp:3.8.1")
-    compile("com.google.code.gson:gson:2.8.1")
 
 
     testCompile("junit:junit")
 
     testCompile("org.mockito:mockito-core:2.8.47")
-    testCompile("au.com.dius:pact-jvm-consumer-junit_2.11:3.5.0")
+    testCompile("au.com.dius:pact-jvm-provider-spring_2.11:3.5.1")
 }
