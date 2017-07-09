@@ -1,17 +1,19 @@
-package example.vehicles;
+package example.vehicles.clients;
 
 import au.com.dius.pact.consumer.Pact;
 import au.com.dius.pact.consumer.PactHttpsProviderRuleMk2;
 import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
 import au.com.dius.pact.model.RequestResponsePact;
+import example.vehicles.Vehicles;
+import example.vehicles.clients.HamburgClient;
 import org.junit.Rule;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class VehiclesRegistryHamburgTest {
+public class HamburgClientTest {
 
     @Rule
     public PactHttpsProviderRuleMk2 hamburgDataProvider =
@@ -39,9 +41,7 @@ public class VehiclesRegistryHamburgTest {
     @Test
     @PactVerification("hamburg-service")
     public void shouldRetriveTheVehiclesInformationFromHamburgService() throws Exception {
-        VehiclesRegistry vehiclesRegistry = new VehiclesRegistry();
-
-        Vehicles vehicles = vehiclesRegistry.informationFor("Hamburg");
+        Vehicles vehicles = new HamburgClient().getInformation();
 
         assertThat(vehicles.getCity(), is("Hamburg"));
         assertThat(vehicles.getDiesel().get(2017), is(10L));
