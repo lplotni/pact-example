@@ -1,0 +1,56 @@
+r13:58:21.484 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+v13:58:21.497 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+â13:58:21.499 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 200]
+è13:58:21.518 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 200]
+~13:58:21.520 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://localhost:8080
+ˆ13:58:21.523 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to localhost/127.0.0.1:8080
+™13:58:21.528 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 127.0.0.1:58471<->127.0.0.1:8080
+v13:58:21.529 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request OPTIONS / HTTP/1.1
+q13:58:21.529 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+p13:58:21.530 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+a13:58:21.534 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> OPTIONS / HTTP/1.1
+e13:58:21.535 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> X-PACT-BOOTCHECK: true
+c13:58:21.535 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: localhost:8080
+e13:58:21.536 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+ƒ13:58:21.536 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_121)
+l13:58:21.537 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+h13:58:21.538 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "OPTIONS / HTTP/1.1[\r][\n]"
+l13:58:21.538 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "X-PACT-BOOTCHECK: true[\r][\n]"
+j13:58:21.538 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+l13:58:21.538 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+Š13:58:21.539 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_121)[\r][\n]"
+s13:58:21.539 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+V13:58:21.539 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+e13:58:21.545 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+y13:58:21.546 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Sun, 09 Jul 2017 11:58:21 GMT[\r][\n]"
+p13:58:21.547 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 << "Transfer-encoding: chunked[\r][\n]"
+l13:58:21.547 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 << "X-pact-bootcheck: true[\r][\n]"
+V13:58:21.548 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+^13:58:21.550 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+r13:58:21.550 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Sun, 09 Jul 2017 11:58:21 GMT
+i13:58:21.550 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 << Transfer-encoding: chunked
+e13:58:21.551 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 << X-pact-bootcheck: true
+{13:58:21.557 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+h13:58:21.654 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseMockServer - Received request: 	method: GET
+#	path: /vehicles/registrations/all
+	query: [:]
+f	headers: [Accept-encoding:gzip, Connection:Keep-Alive, Host:localhost:8080, User-agent:okhttp/3.8.1]
+$	matchers: MatchingRules(rules=[:])
+'	generators: Generators(categories={})
+)	body: OptionalBody(state=EMPTY, value=)
+h13:58:21.675 [Thread-5] DEBUG au.com.dius.pact.model.RequestMatching$ - comparing to expected request: 
+	method: GET
+#	path: /vehicles/registrations/all
+	query: [:]
+	headers: [:]
+$	matchers: MatchingRules(rules=[:])
+'	generators: Generators(categories={})
+/	body: OptionalBody(state=MISSING, value=null)
+k13:58:21.917 [Thread-5] DEBUG au.com.dius.pact.model.Matching$ - No matcher for text/plain, using equality
+a13:58:21.918 [Thread-5] DEBUG au.com.dius.pact.model.RequestMatching$ - Request mismatch: List()
+k13:58:22.017 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseMockServer - Generating response: 	status: 200
+	headers: [:]
+$	matchers: MatchingRules(rules=[:])
+'	generators: Generators(categories={})
+j	body: OptionalBody(state=PRESENT, value={"city":"Hamburg","gasoline":{"2017":100},"diesel":{"2017":10}})
+Ä13:58:22.171 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Writing pact info-app-service -> hamburg-data-provider to file target/pacts/info-app-service-hamburg-data-provider.json

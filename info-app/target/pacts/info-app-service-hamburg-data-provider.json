@@ -1,0 +1,42 @@
+{
+    "provider": {
+        "name": "hamburg-data-provider"
+    },
+    "consumer": {
+        "name": "info-app-service"
+    },
+    "interactions": [
+        {
+            "description": "a request for all vehicle registrations in hamburg",
+            "request": {
+                "method": "GET",
+                "path": "/vehicles/registrations/all"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "city": "Hamburg",
+                    "gasoline": {
+                        "2017": 100
+                    },
+                    "diesel": {
+                        "2017": 10
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "data from 2017 exists"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}
