@@ -1,1 +1,42 @@
-../info-app/target/pacts/info-app-hamburg-service.json
+{
+    "provider": {
+        "name": "hamburg-service"
+    },
+    "consumer": {
+        "name": "info-app"
+    },
+    "interactions": [
+        {
+            "description": "a request for all vehicle registrations in Hamburg",
+            "request": {
+                "method": "GET",
+                "path": "/vehicles/registrations/all"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "city": "Hamburg",
+                    "gasoline": {
+                        "2017": 100
+                    },
+                    "diesel": {
+                        "2017": 10
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "data for HH from 2017 exists"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}
