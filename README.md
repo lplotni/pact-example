@@ -30,7 +30,7 @@ The contract (pact) verification happens here:
 #### cologne-service
 Another **provider**, this time based on [express.js](https://expressjs.com/) and node 8, showing the usage of [pact-js](https://github.com/pact-foundation/pact-js).
 
-To execute the tests just type ```npm test```
+To execute the tests just type ```npm test``` (but remember to have done an ```npm install``` once to set up dependencies, and to have started the server with ```npm start```.
 
 The contract (pact) verification happens here:
 - spec/registrationsSpec.js
