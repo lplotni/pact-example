@@ -1,7 +1,7 @@
 # pact-example
 This repo provides you the minimal setup to play a bit with [pact](https://docs.pact.io), understand it concepts and benefits it can bring to the way how you, your team and the teams around you approach the *consumer driven contracts*.
 
-It contains 3 services which implement some minimal functionality just enough to be able to demonstrate the idea behind *CDC*s and *pact*. You can start everything up by building info-app and hamburg-service by ```gradlew build``` in each directory and running ```docker-compose up``` and executing a HTTP GET against http://localhost:8080/vehiclens/hamburg
+It contains 3 services which implement some minimal functionality just enough to be able to demonstrate the idea behind *CDC*s and *pact*. You can start everything up by building info-app and hamburg-service by ```gradlew build``` in both directories and running ```docker-compose up``` and executing a HTTP GET against http://localhost:8080/vehicles/hamburg
 #### info-app
 The **consumer** of the data provided by the 2 others. Written as a very basic [spring boot] app providing just one HTTP endpoint and exposing how the PACTs are being created by the consumers.
 
