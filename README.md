@@ -20,7 +20,7 @@ curl -v -XPUT \-H "Content-Type: application/json" \
 http://localhost/pacts/provider/cologne-service/consumer/info-app/version/1.0.0
 ```
 #### hamburg-service
-One of the **providers**, also based on the spring boot framewrok, demonstrating how the provider-verification works using [pact-jvm-provider-spring](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-spring).
+One of the **providers**, also based on the spring boot framework, demonstrating how the provider-verification works using [pact-jvm-provider-spring](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-spring).
 
 To execute the tests just type ```gradlew test```
 
@@ -35,7 +35,7 @@ To execute the tests just type ```npm test```
 The contract (pact) verification happens here:
 - spec/registrationsSpec.js
 
-### pact-borker
+### pact-broker
 You can also spin up a [pact-broker](https://github.com/pact-foundation/pact_broker) by running ```docker-compose up``` in the **pact-broker-dockerized** dir. You can access it's UI via http://localhost
 
 A longer introduction to CDCs and PACT will follow as a blog post. Watch [https://lplotni.github.io](https://lplotni.github.io) for updates.
